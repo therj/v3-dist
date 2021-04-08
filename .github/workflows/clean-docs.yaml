@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: delete files
-        run: rm docs/* !(docs/CNAME)
+        run: find ./docs/* ! -name 'CNAME' -type f -exec rm -rf {} + && find ./docs/* ! -name 'CNAME' -type d -exec rm -rf {} +
       - name: commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
