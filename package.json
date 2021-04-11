@@ -1,0 +1,23 @@
+{
+  "name": "v3-dist",
+  "version": "1.0.0",
+  "description": "The source needs a branch to push...",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/therj/v3-dist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/therj/v3-dist/issues"
+  },
+  "homepage": "https://github.com/therj/v3-dist#readme"
+}
