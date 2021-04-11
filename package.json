@@ -6,6 +6,10 @@
   "directories": {
     "doc": "docs"
   },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
