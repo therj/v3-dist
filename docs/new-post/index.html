@@ -645,13 +645,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="The Author Name">
-<meta name="description" content="Eleventy Core boilerplate is a starter file unopinionated and optimized for today's demanding web applications. We are proud to present the most useful and realistic use of the Eleventy Static Site G…">
 <meta property="og:type" content="website">
-<meta property="og:description" content="Eleventy Core boilerplate is a starter file unopinionated and optimized for today's demanding web applications. We are proud to present the most useful and realistic use of the Eleventy Static Site G…">
 <meta property="og:url" content="theCanonical">
+<meta property="og:image" content="logo.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="theTwitter">
-<meta name="twitter:description" content="Eleventy Core boilerplate is a starter file unopinionated and optimized for today's demanding web applications. We are proud to present the most useful and realistic use of the Eleventy Static Site G…">
+<meta name="twitter:image" content="logo.png">
 <link rel="canonical" href="theCanonical">
 
 	<script type="application/ld+json">
@@ -667,7 +666,7 @@
       "inLanguage": "en-US"
     },
     {
-      "@type": "WebPage",
+      "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage"
       },
@@ -676,13 +675,18 @@
       },
       "headline": "Eleventy Core Boilerplate",
       "description": "Eleventy Core boilerplate is a starter file unopinionated and optimized for today&#39;s demanding web applications. We are proud to present the most useful and realistic use of the Eleventy Static Site Generator to you.",
-      "image": "",
+      "image": "logo.png",
       "inLanguage": "en-US",
       "publisher": {
         "@type": "Organization",
         "name": "",
         "url": ""
-      }
+      },
+      "author": {
+        "@type": "Person",
+        "name": ""
+      },
+      "keywords": "post"
     }
   ]
 }
@@ -748,10 +752,16 @@
       
     
     
-      <section>
+      <section id="post">
+<h2>Post Layout!</h2>
+
+
+<section>
 NEWW pOST
 </section>
-      
+
+</section>
+
     
     <footer class="footer">
   <div class="footer__work">
@@ -823,13 +833,22 @@ NEWW pOST
   </div>
   <div class="credit__text">
     <span>Designed &amp; Developed by Rabindra Joshi.</span>
-    <span>Built with 11ty, GitHub, Netlify and sweat.</span>
+    <span>Built with <a href="">a lot of tools</a> .</span>
   </div>
 
   <a class="credit__privacy" href="https://v3.rjoshi.net/privacy-policy">Privacy Policy</a>
 </div>
 
 
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', '', {'anonymize_ip': true});
+  </script>
+  
 
 
 </body>
