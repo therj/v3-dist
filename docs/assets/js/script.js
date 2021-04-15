@@ -313,7 +313,7 @@ function podcastPlayerHandlerObserver() {
   const observer = new IntersectionObserver(podcastPlayerHandler, options);
   // target = document.querySelector(`.recent__card__podcast`)
   const target = document.querySelector(`.recent__card__podcast`);
-  observer.observe(target);
+  if (target) observer.observe(target);
 }
 
 // eslint-disable-next-line no-unused-vars
@@ -365,17 +365,19 @@ function moreProjectsClickHandler() {
 
   // TODO:make transition smooth
   const buttons = [moreButton, lessButton];
-  buttons.forEach((button) =>
-    button.addEventListener(`click`, () => {
-      otherProjectsContainer.classList.toggle(`display-all`);
-      if (button === lessButton) {
-        const y = moreButton.offsetTop - 200;
-        window.scroll({
-          top: y,
-          behavior: `auto`,
-        });
-      }
-    })
+  buttons.forEach(
+    (button) =>
+      button &&
+      button.addEventListener(`click`, () => {
+        otherProjectsContainer.classList.toggle(`display-all`);
+        if (button === lessButton) {
+          const y = moreButton.offsetTop - 200;
+          window.scroll({
+            top: y,
+            behavior: `auto`,
+          });
+        }
+      })
   );
 }
 
