@@ -1,15 +1,16 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<title>Home Page</title>
   <head>
     
 		<link rel="stylesheet" href="https://ghcdn.rawgit.org/PrismJS/prism-themes/master/themes/prism-a11y-dark.css">
 
-	<link rel="stylesheet" href="https://v3.rjoshi.net/css/style.css"/>
-	<script async defer src="https://v3.rjoshi.net/assets/js/script.js"></script>
-	<script defer src="https://v3.rjoshi.net/assets/js/theme.js"></script>
+	<link rel="stylesheet" href="/css/style.css"/>
+	<script async defer src="/assets/js/script.js"></script>
+	<script src="/assets/js/theme.js"></script>
 
-	<script defer src="https://v3.rjoshi.net/assets/js/gtman.js"></script>
+	<script defer src="/assets/js/gtman.js"></script>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com"><link data-href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet"><style data-href='https://fonts.googleapis.com/css2?family=Inter:wght@600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'>/* cyrillic-ext */
 @font-face {
@@ -663,27 +664,27 @@
 </head>
 
 
-  <body class=>
+  <body class=hide-before>
     
         <!-- Navbar start -->
     <nav class="nav">
       <div class="nav__logo">
-      <a href='https://v3.rjoshi.net' aria-label="site logo">
-        <img src="https://v3.rjoshi.net/assets/img/brand/logo/svg/large-6.svg" alt="logo" />
+      <a href="/" aria-label="site logo">
+        <img src="/assets/img/brand/logo/svg/large-6.svg" alt="logo" />
       </a>
       </div>
       <a
         href="javascript:void(0)"
         class="goLight nav__theme--light"
         aria-label="switch to light mode"
-        ><img src="https://v3.rjoshi.net/assets/img/site/sun.svg" alt="switch to light theme"
+        ><img src="/assets/img/site/sun.svg" alt="switch to light theme"
       /></a>
       <a
         href="javascript:void(0)"
         class="goDark nav__theme--dark"
         aria-label="switch to dark mode"
       >
-        <img src="https://v3.rjoshi.net/assets/img/site/moon.svg" alt="switch to dark theme"
+        <img src="/assets/img/site/moon.svg" alt="switch to dark theme"
       /></a>
 
       <!--  -->
@@ -721,6 +722,7 @@
     
     
     
+    <p>
     
 <section class="home">
 <section class="intro">
@@ -734,17 +736,27 @@
     </p>
     <p class="hello__intro--long">I’m a Software Engineer based in Kathmandu, Nepal. I’ve an obsession with building exceptional, high quality, well-architectured, web-based solutions.
   <br>
-  My goal is to collaborate with other world-class engineers to build products that deliver performant<span class="performant"><sup>?</sup><span class="perform">Functioning well, as expected.<br>100% accessible, 100% performance(95 + mobile), ZERO CLS.Test with the lighthouse yourself. </span></span > experience.</p>
+  My goal is to collaborate with other world-class engineers to build products that deliver performant<span class="performant"><sup>?</sup><span class="perform">This website is 100% accessible, 90+ performance, ZERO layout shift (source: Lighthouse test).</span></span > experience.</p>
   </div>
   <div class="cta">
     
       <a href="javascript:void(0)" class="cta__btn cta__btn--work">
+      
+      <span>
+        <img src="/assets/img/site/briefcase.svg" alt="icon Work With Me" />
+      </span>
+      
         <span >
           Work With Me
         </span>
       </a>
     
       <a href="javascript:void(0)" class="cta__btn cta__btn--mentorship">
+      
+      <span>
+        <img src="/assets/img/site/code.svg" alt="icon Mentorship (beta)" />
+      </span>
+      
         <span 
            class="has-dirty-bg"
         >
@@ -773,70 +785,59 @@
   <div class="recent__card recent__card__external">
   <span class="recent__card__external__featured">
     <a
-      href="https://www.happyinmyskin.co.uk/people-feel-like-theyre-good-meditating/"
+      href="https://www.shoutmeloud.com/seotesting-review.html"
       class="recent__card__external__featured__link"
       >
       <img
         class="recent__card__external__featured__link--image"
-        src="https://www.happyinmyskin.co.uk/wp-content/uploads/2014/07/meditation-circle.jpg"
+        src="https://www.shoutmeloud.com/wp-content/uploads/2020/09/WordPress-SEO-Tutorial.jpg"
         alt="external featured image"
-        />
+/>
     </a>
-
-
 
     
       <a
       class="recent__card__external__featured__ribbon"
-      href="https://www.happyinmyskin.co.uk"
+      href="https://www.shoutmeloud.com"
       >
-        happyinmyskin
+        shoutmeloud
       </a>
     
     
   </span>
   <div class="recent__card__external__content">
     <a
-      href="https://www.happyinmyskin.co.uk/people-feel-like-theyre-good-meditating/"
+      href="https://www.shoutmeloud.com/seotesting-review.html"
       class="recent__card__external__content__link"
       >
       <h3 class="recent__card__external__content__link--title">
-        <span class="has-dirty-bg">
-          &#8216;I&#8217;ve tried meditating and I&#8217;m no good at it!&#8217;
-        </span>
+          SEOTesting Tool Review &#8211; Google Search Console on Steroids
       </h3>
       <p class="recent__card__external__content__link--excerpt">
-        <span class="has-dirty-bg">
-          What stops lots of people meditating is a fear that they are doing it wrong and they give up before they have even properly begun and started to experience any of the myriad of benefits that a regular meditation practice brings. This is because there are quite a lot of misconceptions about what the experience of meditating is like. Probably &#8230; Read More…...
-        </span>
+          When it comes to free SEO tools, nothing beats what the Google search console offers. However, there are only limited things you could do with the Google search console, and you have to be a partial nerd to make sense out of it. Well, if you have been wondering if there is an app that…...
       </p>
     </a>
     <div class="recent__card__external__content__footer">
-      <a
+      
+        <a
         class="recent__card__external__content__footer--read-more"
-        href="https://www.happyinmyskin.co.uk/people-feel-like-theyre-good-meditating/"
-        
+        href="https://www.shoutmeloud.com/seotesting-review.html"
         target="_blank"
         rel="external noopener"
-        
         data-bg="dark"
-        aria-label="Read this post on happyinmyskin"
-        >Check Out</a
-      >
-      <a
+        aria-label="Read this post on shoutmeloud"
+        >Check Out</a>
+      
+
+      
+        <a
         class="recent__card__external__content__footer--visit"
-        
-        href="https://www.happyinmyskin.co.uk"
+        href="https://www.shoutmeloud.com"
         target="_blank"
         rel="external noopener"
-        
-        aria-label="Visit happyinmyskin"
-        aria-label="Visit happyinmyskin"
-      >
-        
-          <span class="has-dirty-bg"> Visit site </span>
-        
-      </a>
+        aria-label="Visit shoutmeloud"
+      >Visit site</a>
+      
     </div>
   </div>
 </div>
@@ -859,12 +860,10 @@
       >
       <img
         class="recent__card__blog__featured__link--image"
-        src="https://v3.rjoshi.net/assets/img/blog/sample.jpg"
+        src="/assets/img/blog/sample15.jpg"
         alt="blog featured image"
-        />
+/>
     </a>
-
-
 
     
     
@@ -875,37 +874,30 @@
       class="recent__card__blog__content__link"
       >
       <h3 class="recent__card__blog__content__link--title">
-        <span class="has-dirty-bg">
           Some Post!
-        </span>
       </h3>
       <p class="recent__card__blog__content__link--excerpt">
-        <span class="has-dirty-bg">
           This is an excerpt - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, amet?…...
-        </span>
       </p>
     </a>
     <div class="recent__card__blog__content__footer">
-      <a
+      
+        <a
         class="recent__card__blog__content__footer--read-more"
-        href="https://v3.rjoshi.net/post-21-some-post-blog/"
-        
+        href="/post-21-some-post-blog/"
         data-bg="dark"
-        aria-label="Read this post on v3"
-        >Check Out</a
+        aria-label="Read this post on hostName(LAN-MODE)"
+        >Read This</a
       >
-      <a
+      
+
+      
+        <a
         class="recent__card__blog__content__footer--visit"
-        
-        href="https://v3.rjoshi.net/blog/"
-        
-        aria-label="Visit v3"
-        aria-label="Visit v3"
-      >
-        
-          <span class="has-dirty-bg"> Visit blog </span>
-        
-      </a>
+        href="/blog/"
+        aria-label="Visit hostName(LAN-MODE)"
+      >Visit blog</a>
+      
     </div>
   </div>
 </div>
@@ -916,10 +908,9 @@
   <!-- Podcast card -->
   <div class="recent__card recent__card__podcast">
 
-  
     <div class="recent__card__podcast--container">
       <h3 class="recent__card__podcast--section-title">
-        <span class="has-dirty-bg">
+        <span>
             Featured Podcasts
             </span>
             <br>
@@ -936,19 +927,58 @@
           <div class="recent__card__podcast__list--item">
   <div class="recent__card__podcast__list--item__heading">
     <span class="recent__card__podcast__list--item__heading--btn">
-      <img class="media-button play"  src="https://v3.rjoshi.net/assets/img/site/play-filled.svg" alt=""/>
-      <img class="media-button pause" src="https://v3.rjoshi.net/assets/img/site/pause-filled.svg" alt=""/>
+      <img class="media-button play"  src="/assets/img/site/play-filled.svg" alt=""/>
+      <img class="media-button pause" src="/assets/img/site/pause-filled.svg" alt=""/>
     </span>
-    <span  class="recent__card__podcast__list--item__heading--title has-dirty-bg has-dirty-bg">Achieving shared goals within our Front End teams w/ Ana Almeida</span>
+    <span  class="recent__card__podcast__list--item__heading--title">The Side Project Episode</span>
   </div>
   <div class="recent__card__podcast__list--item__datetime">
-    <span class="recent__card__podcast__list--item__datetime--date has-dirty-bg">
+    <span class="recent__card__podcast__list--item__datetime--date">
+    
+     26 Apr 2021
+     </span>
+    <audio preload="none" src="https://anchor.fm/s/e0146dc/podcast/play/31749321/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-3-19%2F177259169-44100-2-83405667e27e7.m4a" type="audio/mpeg" >Error? <a href="https://anchor.fm/s/e0146dc/podcast/play/31749321/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2021-3-19%2F177259169-44100-2-83405667e27e7.m4a"> Get mp3</a>
+    </audio>
+    <span class="recent__card__podcast__list--item__datetime--duration">23:52</span>
+  </div>
+  <div class="recent__card__podcast__list--item__progress">
+    <span href="javascript:void(0)" class="recent__card__podcast__list--item__progress--buffered" data-progress="0.5"></span>
+    <span href="javascript:void(0)" class="recent__card__podcast__list--item__progress--played" data-progress="0.5"></span>
+  </div>
+  <!-- <div class="recent__card__podcast__list--item__plusminus">
+                <span class="plus10">
+                  <img src="/assets/img/site/forward-10s.svg" alt="" srcset="" />
+                </span>
+                <span class="plus30">
+                  <img src="/assets/img/site/forward-30s.svg" alt="" srcset="" />
+                </span>
+                <span class="minus10">
+                  <img src="/assets/img/site/rewind-10s.svg" alt="" srcset="" />
+                </span>
+                <span class="minus30">
+                  <img src="/assets/img/site/rewind-30s.svg" alt="" srcset="" />
+                </span>
+              </div> -->
+</div>
+
+  
+        
+          <div class="recent__card__podcast__list--item">
+  <div class="recent__card__podcast__list--item__heading">
+    <span class="recent__card__podcast__list--item__heading--btn">
+      <img class="media-button play"  src="/assets/img/site/play-filled.svg" alt=""/>
+      <img class="media-button pause" src="/assets/img/site/pause-filled.svg" alt=""/>
+    </span>
+    <span  class="recent__card__podcast__list--item__heading--title">Achieving shared goals within our Front End teams w/ Ana Almeida</span>
+  </div>
+  <div class="recent__card__podcast__list--item__datetime">
+    <span class="recent__card__podcast__list--item__datetime--date">
     
      23 Dec 2020
      </span>
     <audio preload="none" src="https://anchor.fm/s/e0146dc/podcast/play/24309750/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-11-22%2F140184385-44100-2-9201cf9c77e41.m4a" type="audio/mpeg" >Error? <a href="https://anchor.fm/s/e0146dc/podcast/play/24309750/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-11-22%2F140184385-44100-2-9201cf9c77e41.m4a"> Get mp3</a>
     </audio>
-    <span class="recent__card__podcast__list--item__datetime--duration has-dirty-bg">29:29</span>
+    <span class="recent__card__podcast__list--item__datetime--duration">29:29</span>
   </div>
   <div class="recent__card__podcast__list--item__progress">
     <span href="javascript:void(0)" class="recent__card__podcast__list--item__progress--buffered" data-progress="0.5"></span>
@@ -956,16 +986,16 @@
   </div>
   <!-- <div class="recent__card__podcast__list--item__plusminus">
                 <span class="plus10">
-                  <img src="https://v3.rjoshi.net/assets/img/site/forward-10s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/forward-10s.svg" alt="" srcset="" />
                 </span>
                 <span class="plus30">
-                  <img src="https://v3.rjoshi.net/assets/img/site/forward-30s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/forward-30s.svg" alt="" srcset="" />
                 </span>
                 <span class="minus10">
-                  <img src="https://v3.rjoshi.net/assets/img/site/rewind-10s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/rewind-10s.svg" alt="" srcset="" />
                 </span>
                 <span class="minus30">
-                  <img src="https://v3.rjoshi.net/assets/img/site/rewind-30s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/rewind-30s.svg" alt="" srcset="" />
                 </span>
               </div> -->
 </div>
@@ -975,19 +1005,19 @@
           <div class="recent__card__podcast__list--item">
   <div class="recent__card__podcast__list--item__heading">
     <span class="recent__card__podcast__list--item__heading--btn">
-      <img class="media-button play"  src="https://v3.rjoshi.net/assets/img/site/play-filled.svg" alt=""/>
-      <img class="media-button pause" src="https://v3.rjoshi.net/assets/img/site/pause-filled.svg" alt=""/>
+      <img class="media-button play"  src="/assets/img/site/play-filled.svg" alt=""/>
+      <img class="media-button pause" src="/assets/img/site/pause-filled.svg" alt=""/>
     </span>
-    <span  class="recent__card__podcast__list--item__heading--title has-dirty-bg has-dirty-bg">The Self Taught Developer with Hamish Macpherson</span>
+    <span  class="recent__card__podcast__list--item__heading--title">The Self Taught Developer with Hamish Macpherson</span>
   </div>
   <div class="recent__card__podcast__list--item__datetime">
-    <span class="recent__card__podcast__list--item__datetime--date has-dirty-bg">
+    <span class="recent__card__podcast__list--item__datetime--date">
     
      28 Sep 2020
      </span>
     <audio preload="none" src="https://anchor.fm/s/e0146dc/podcast/play/19992648/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-22%2F32ec6c08-a3cc-1757-1c4f-f05d9eff38be.mp3" type="audio/mpeg" >Error? <a href="https://anchor.fm/s/e0146dc/podcast/play/19992648/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-22%2F32ec6c08-a3cc-1757-1c4f-f05d9eff38be.mp3"> Get mp3</a>
     </audio>
-    <span class="recent__card__podcast__list--item__datetime--duration has-dirty-bg">34:01</span>
+    <span class="recent__card__podcast__list--item__datetime--duration">34:01</span>
   </div>
   <div class="recent__card__podcast__list--item__progress">
     <span href="javascript:void(0)" class="recent__card__podcast__list--item__progress--buffered" data-progress="0.5"></span>
@@ -995,16 +1025,16 @@
   </div>
   <!-- <div class="recent__card__podcast__list--item__plusminus">
                 <span class="plus10">
-                  <img src="https://v3.rjoshi.net/assets/img/site/forward-10s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/forward-10s.svg" alt="" srcset="" />
                 </span>
                 <span class="plus30">
-                  <img src="https://v3.rjoshi.net/assets/img/site/forward-30s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/forward-30s.svg" alt="" srcset="" />
                 </span>
                 <span class="minus10">
-                  <img src="https://v3.rjoshi.net/assets/img/site/rewind-10s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/rewind-10s.svg" alt="" srcset="" />
                 </span>
                 <span class="minus30">
-                  <img src="https://v3.rjoshi.net/assets/img/site/rewind-30s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/rewind-30s.svg" alt="" srcset="" />
                 </span>
               </div> -->
 </div>
@@ -1014,19 +1044,19 @@
           <div class="recent__card__podcast__list--item">
   <div class="recent__card__podcast__list--item__heading">
     <span class="recent__card__podcast__list--item__heading--btn">
-      <img class="media-button play"  src="https://v3.rjoshi.net/assets/img/site/play-filled.svg" alt=""/>
-      <img class="media-button pause" src="https://v3.rjoshi.net/assets/img/site/pause-filled.svg" alt=""/>
+      <img class="media-button play"  src="/assets/img/site/play-filled.svg" alt=""/>
+      <img class="media-button pause" src="/assets/img/site/pause-filled.svg" alt=""/>
     </span>
-    <span  class="recent__card__podcast__list--item__heading--title has-dirty-bg has-dirty-bg">Working remotely</span>
+    <span  class="recent__card__podcast__list--item__heading--title">Working remotely</span>
   </div>
   <div class="recent__card__podcast__list--item__datetime">
-    <span class="recent__card__podcast__list--item__datetime--date has-dirty-bg">
+    <span class="recent__card__podcast__list--item__datetime--date">
     
      03 Sep 2020
      </span>
     <audio preload="none" src="https://anchor.fm/s/e0146dc/podcast/play/18959710/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-2%2F3da91acc-f7f5-e255-c2f3-44d895d35986.mp3" type="audio/mpeg" >Error? <a href="https://anchor.fm/s/e0146dc/podcast/play/18959710/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2020-8-2%2F3da91acc-f7f5-e255-c2f3-44d895d35986.mp3"> Get mp3</a>
     </audio>
-    <span class="recent__card__podcast__list--item__datetime--duration has-dirty-bg">33:47</span>
+    <span class="recent__card__podcast__list--item__datetime--duration">33:47</span>
   </div>
   <div class="recent__card__podcast__list--item__progress">
     <span href="javascript:void(0)" class="recent__card__podcast__list--item__progress--buffered" data-progress="0.5"></span>
@@ -1034,16 +1064,16 @@
   </div>
   <!-- <div class="recent__card__podcast__list--item__plusminus">
                 <span class="plus10">
-                  <img src="https://v3.rjoshi.net/assets/img/site/forward-10s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/forward-10s.svg" alt="" srcset="" />
                 </span>
                 <span class="plus30">
-                  <img src="https://v3.rjoshi.net/assets/img/site/forward-30s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/forward-30s.svg" alt="" srcset="" />
                 </span>
                 <span class="minus10">
-                  <img src="https://v3.rjoshi.net/assets/img/site/rewind-10s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/rewind-10s.svg" alt="" srcset="" />
                 </span>
                 <span class="minus30">
-                  <img src="https://v3.rjoshi.net/assets/img/site/rewind-30s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/rewind-30s.svg" alt="" srcset="" />
                 </span>
               </div> -->
 </div>
@@ -1053,19 +1083,19 @@
           <div class="recent__card__podcast__list--item">
   <div class="recent__card__podcast__list--item__heading">
     <span class="recent__card__podcast__list--item__heading--btn">
-      <img class="media-button play"  src="https://v3.rjoshi.net/assets/img/site/play-filled.svg" alt=""/>
-      <img class="media-button pause" src="https://v3.rjoshi.net/assets/img/site/pause-filled.svg" alt=""/>
+      <img class="media-button play"  src="/assets/img/site/play-filled.svg" alt=""/>
+      <img class="media-button pause" src="/assets/img/site/pause-filled.svg" alt=""/>
     </span>
-    <span  class="recent__card__podcast__list--item__heading--title has-dirty-bg has-dirty-bg">Accessibility with Amy Lee</span>
+    <span  class="recent__card__podcast__list--item__heading--title">Accessibility with Amy Lee</span>
   </div>
   <div class="recent__card__podcast__list--item__datetime">
-    <span class="recent__card__podcast__list--item__datetime--date has-dirty-bg">
+    <span class="recent__card__podcast__list--item__datetime--date">
     
      28 Feb 2020
      </span>
     <audio preload="none" src="https://anchor.fm/s/e0146dc/podcast/play/10529421/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2020-1-21%2F51626554-44100-2-fc5e2aeeb3c01.mp3" type="audio/mpeg" >Error? <a href="https://anchor.fm/s/e0146dc/podcast/play/10529421/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2020-1-21%2F51626554-44100-2-fc5e2aeeb3c01.mp3"> Get mp3</a>
     </audio>
-    <span class="recent__card__podcast__list--item__datetime--duration has-dirty-bg">28:29</span>
+    <span class="recent__card__podcast__list--item__datetime--duration">28:29</span>
   </div>
   <div class="recent__card__podcast__list--item__progress">
     <span href="javascript:void(0)" class="recent__card__podcast__list--item__progress--buffered" data-progress="0.5"></span>
@@ -1073,55 +1103,16 @@
   </div>
   <!-- <div class="recent__card__podcast__list--item__plusminus">
                 <span class="plus10">
-                  <img src="https://v3.rjoshi.net/assets/img/site/forward-10s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/forward-10s.svg" alt="" srcset="" />
                 </span>
                 <span class="plus30">
-                  <img src="https://v3.rjoshi.net/assets/img/site/forward-30s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/forward-30s.svg" alt="" srcset="" />
                 </span>
                 <span class="minus10">
-                  <img src="https://v3.rjoshi.net/assets/img/site/rewind-10s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/rewind-10s.svg" alt="" srcset="" />
                 </span>
                 <span class="minus30">
-                  <img src="https://v3.rjoshi.net/assets/img/site/rewind-30s.svg" alt="" srcset="" />
-                </span>
-              </div> -->
-</div>
-
-  
-        
-          <div class="recent__card__podcast__list--item">
-  <div class="recent__card__podcast__list--item__heading">
-    <span class="recent__card__podcast__list--item__heading--btn">
-      <img class="media-button play"  src="https://v3.rjoshi.net/assets/img/site/play-filled.svg" alt=""/>
-      <img class="media-button pause" src="https://v3.rjoshi.net/assets/img/site/pause-filled.svg" alt=""/>
-    </span>
-    <span  class="recent__card__podcast__list--item__heading--title has-dirty-bg has-dirty-bg">Technical Debt</span>
-  </div>
-  <div class="recent__card__podcast__list--item__datetime">
-    <span class="recent__card__podcast__list--item__datetime--date has-dirty-bg">
-    
-     13 Dec 2019
-     </span>
-    <audio preload="none" src="https://anchor.fm/s/e0146dc/podcast/play/8986364/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2019-11-13%2F38471188-44100-2-90e4720ba2dcd.mp3" type="audio/mpeg" >Error? <a href="https://anchor.fm/s/e0146dc/podcast/play/8986364/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fproduction%2F2019-11-13%2F38471188-44100-2-90e4720ba2dcd.mp3"> Get mp3</a>
-    </audio>
-    <span class="recent__card__podcast__list--item__datetime--duration has-dirty-bg">29:07</span>
-  </div>
-  <div class="recent__card__podcast__list--item__progress">
-    <span href="javascript:void(0)" class="recent__card__podcast__list--item__progress--buffered" data-progress="0.5"></span>
-    <span href="javascript:void(0)" class="recent__card__podcast__list--item__progress--played" data-progress="0.5"></span>
-  </div>
-  <!-- <div class="recent__card__podcast__list--item__plusminus">
-                <span class="plus10">
-                  <img src="https://v3.rjoshi.net/assets/img/site/forward-10s.svg" alt="" srcset="" />
-                </span>
-                <span class="plus30">
-                  <img src="https://v3.rjoshi.net/assets/img/site/forward-30s.svg" alt="" srcset="" />
-                </span>
-                <span class="minus10">
-                  <img src="https://v3.rjoshi.net/assets/img/site/rewind-10s.svg" alt="" srcset="" />
-                </span>
-                <span class="minus30">
-                  <img src="https://v3.rjoshi.net/assets/img/site/rewind-30s.svg" alt="" srcset="" />
+                  <img src="/assets/img/site/rewind-30s.svg" alt="" srcset="" />
                 </span>
               </div> -->
 </div>
@@ -1135,22 +1126,19 @@
         <div class="recent__card__podcast__list--more">
           <a target="_blank" rel="noopener"
         href="https://anchor.fm/bufferoverflow/" data-bg="light">
-            <span class="has-dirty-bg">
           View all on anchor.fm
-            </span>
           </a>
         </div>
       
     </div>
-  
 </div>
 
 
 </section>
 
 <section class="experience">
-      <h2 class="experience__section-title">Work Experience</h2>
-        <div class="experience-container">
+  <h2 class="experience__section-title">Work Experience</h2>
+  <div class="experience-container">
 
   
     <div class="experience__arrowlist">
@@ -1237,7 +1225,7 @@
     
   </ul>
 
-  <div class="experience__content has-dirty-bg-child">
+  <div class="experience__content">
     
       <div
             class="experience__content--item experience__content--bugmentor active animate "
@@ -1245,7 +1233,7 @@
           >
         <div class="experience__content--item__title">
           <span class="title">Software Engineer</span>
-          <span class="organization">@Bugmentor</span>
+          <span class="organization">@ Bugmentor</span>
         </div>
         <div class="experience__content--item__subtitle">
           <span>Sub Title Here</span>
@@ -1297,7 +1285,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -1310,7 +1298,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -1326,7 +1314,7 @@
           >
         <div class="experience__content--item__title">
           <span class="title">Founder</span>
-          <span class="organization">@Entranceup</span>
+          <span class="organization">@ Entranceup</span>
         </div>
         <div class="experience__content--item__subtitle">
           <span>Worked on all phases of development from product design to system design.</span>
@@ -1375,7 +1363,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -1388,7 +1376,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -1404,7 +1392,7 @@
           >
         <div class="experience__content--item__title">
           <span class="title">Web Developer</span>
-          <span class="organization">@Proshore Nepal</span>
+          <span class="organization">@ Proshore Nepal</span>
         </div>
         <div class="experience__content--item__subtitle">
           <span>Sub Title Here</span>
@@ -1459,7 +1447,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -1472,7 +1460,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -1488,7 +1476,7 @@
           >
         <div class="experience__content--item__title">
           <span class="title">Instructor</span>
-          <span class="organization">@Neosphere</span>
+          <span class="organization">@ Neosphere</span>
         </div>
         <div class="experience__content--item__subtitle">
           <span>For Python with Django</span>
@@ -1543,7 +1531,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -1556,7 +1544,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -1572,7 +1560,7 @@
           >
         <div class="experience__content--item__title">
           <span class="title">Software Engineering Intern</span>
-          <span class="organization">@Leapfrog Technology</span>
+          <span class="organization">@ Leapfrog Technology</span>
         </div>
         <div class="experience__content--item__subtitle">
           <span>6 weeks intense internship</span>
@@ -1624,7 +1612,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -1637,7 +1625,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -1653,7 +1641,7 @@
           >
         <div class="experience__content--item__title">
           <span class="title">Ghost Writer</span>
-          <span class="organization">@Freelance</span>
+          <span class="organization">@ Freelance</span>
         </div>
         <div class="experience__content--item__subtitle">
           <span>Tech &amp; Programming Content (JavaScript)</span>
@@ -1708,7 +1696,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -1721,7 +1709,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -1736,12 +1724,20 @@
 </div>
 
   
+</section>
 
-      
-    </section>
 
-<section class="tools has-dirty-bg-child">
+
+        
+        
+        
+
+
+<section class="tools">
   <h2 class="tools__section-title">Tools of the Trade</h2>
+
+  
+
   <div class="tools__card tools__card__languages">
     <h3 class="tools__card__languages__title">
       <span>Languages</span></h3>
@@ -1942,7 +1938,7 @@
     
   </ul>
 
-  <div class="foss__content has-dirty-bg-child">
+  <div class="foss__content">
     
       <div
             class="foss__content--item foss__content--tdl active animate "
@@ -1950,7 +1946,7 @@
           >
         <div class="foss__content--item__title">
           <span class="title">Maintainer</span>
-          <span class="organization">@TDL</span>
+          <span class="organization">@ TDL</span>
         </div>
         <div class="foss__content--item__subtitle">
           <span>Sub Title Here</span>
@@ -2002,7 +1998,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -2015,7 +2011,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -2031,7 +2027,7 @@
           >
         <div class="foss__content--item__title">
           <span class="title">Contributor</span>
-          <span class="organization">@Ulauncher Emoji</span>
+          <span class="organization">@ Ulauncher Emoji</span>
         </div>
         <div class="foss__content--item__subtitle">
           <span>Worked on all phases of development from product design to system design.</span>
@@ -2080,7 +2076,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -2093,7 +2089,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -2109,7 +2105,7 @@
           >
         <div class="foss__content--item__title">
           <span class="title">Web Developer</span>
-          <span class="organization">@Ulauncher Repl</span>
+          <span class="organization">@ Ulauncher Repl</span>
         </div>
         <div class="foss__content--item__subtitle">
           <span>Sub Title Here</span>
@@ -2164,7 +2160,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -2177,7 +2173,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -2193,7 +2189,7 @@
           >
         <div class="foss__content--item__title">
           <span class="title">Instructor</span>
-          <span class="organization">@Ulauncher AWS</span>
+          <span class="organization">@ Ulauncher AWS</span>
         </div>
         <div class="foss__content--item__subtitle">
           <span>For Python with Django</span>
@@ -2248,7 +2244,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -2261,7 +2257,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -2277,7 +2273,7 @@
           >
         <div class="foss__content--item__title">
           <span class="title">Software Engineering Intern</span>
-          <span class="organization">@Ulauncher Notes</span>
+          <span class="organization">@ Ulauncher Notes</span>
         </div>
         <div class="foss__content--item__subtitle">
           <span>6 weeks intense internship</span>
@@ -2329,7 +2325,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -2342,7 +2338,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -2358,7 +2354,7 @@
           >
         <div class="foss__content--item__title">
           <span class="title">Ghost Writer</span>
-          <span class="organization">@Ulauncher VS Code Projects</span>
+          <span class="organization">@ Ulauncher VS Code Projects</span>
         </div>
         <div class="foss__content--item__subtitle">
           <span>Tech &amp; Programming Content (JavaScript)</span>
@@ -2413,7 +2409,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -2426,7 +2422,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -2442,7 +2438,7 @@
           >
         <div class="foss__content--item__title">
           <span class="title">Contributor</span>
-          <span class="organization">@Ulauncher DevDocs</span>
+          <span class="organization">@ Ulauncher DevDocs</span>
         </div>
         <div class="foss__content--item__subtitle">
           <span>Tech &amp; Programming Content (JavaScript)</span>
@@ -2497,7 +2493,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/github.svg" alt="githublink"
+                  <img src="/assets/img/site/github.svg" alt="githublink"
 />
                 </span>
               </a>
@@ -2510,7 +2506,7 @@
               <a href="https://github.com/therj/v3"
                 >
                 <span>
-                  <img src="https://v3.rjoshi.net/assets/img/site/external.svg" alt="weblink"
+                  <img src="/assets/img/site/external.svg" alt="weblink"
 />
                 </span>
               </a>
@@ -2538,18 +2534,14 @@
       <div class="projects__featured__item__image">
         <img
         class="projects__featured__item__image--src"
-        src="https://v3.rjoshi.net/assets/img/brand/project/sample.jpg"
+        src="/assets/img/brand/project/sample.jpg"
         alt=""
         />
       </div>
       <div class="projects__featured__item__content">
-        <div class="projects__featured__item__content__title">
-        <span class="has-dirty-bg-800">Featured Project</span>
-        </div>
+        <div class="projects__featured__item__content__title">Featured Project</div>
         <div class="projects__featured__item__content__name">
-        <span class="has-dirty-bg-800">
           Project Name
-        </span>
         </div>
         <div class="projects__featured__item__content__description">
           <p>
@@ -2558,24 +2550,23 @@
         </div>
         <div class="projects__featured__item__content__tech">
           
-            <span class="has-dirty-bg-800">Python</span>
+            <span>Python</span>
           
-            <span class="has-dirty-bg-800">Flask</span>
+            <span>Flask</span>
           
-            <span class="has-dirty-bg-800">Postgres</span>
+            <span>Postgres</span>
           
         </div>
         <div class="projects__featured__item__content__links">
           
             
             
-              <a href="https://github.com/therj/v3">
+              <a href="https://github.com/therj/v3" class="icon-child">
                 <span>
-                  <img  class="has-dirty-bg-800"
-
-            src="https://v3.rjoshi.net/assets/img/site/external.svg"
-            alt="weblink"
-/>
+                  <img
+                  src="/assets/img/site/external.svg"
+                  alt="weblink"
+                  />
                 </span>
               </a>
             
@@ -2588,18 +2579,14 @@
       <div class="projects__featured__item__image">
         <img
         class="projects__featured__item__image--src"
-        src="https://v3.rjoshi.net/assets/img/brand/project/sample2.jpg"
+        src="/assets/img/brand/project/sample2.jpg"
         alt=""
         />
       </div>
       <div class="projects__featured__item__content">
-        <div class="projects__featured__item__content__title">
-        <span class="has-dirty-bg-800">Featured Project</span>
-        </div>
+        <div class="projects__featured__item__content__title">Featured Project</div>
         <div class="projects__featured__item__content__name">
-        <span class="has-dirty-bg-800">
           Featured Again
-        </span>
         </div>
         <div class="projects__featured__item__content__description">
           <p>
@@ -2609,23 +2596,22 @@
         </div>
         <div class="projects__featured__item__content__tech">
           
-            <span class="has-dirty-bg-800">Python</span>
+            <span>Python</span>
           
-            <span class="has-dirty-bg-800">Flask</span>
+            <span>Flask</span>
           
-            <span class="has-dirty-bg-800">Postgres</span>
+            <span>Postgres</span>
           
         </div>
         <div class="projects__featured__item__content__links">
           
             
-              <a href="https://github.com/therj/v3">
+              <a href="https://github.com/therj/v3" class="icon-child">
                 <span>
-                  <img  class="has-dirty-bg-800"
-
-            src="https://v3.rjoshi.net/assets/img/site/github.svg"
-            alt="githublink"
-            />
+                  <img
+                  src="/assets/img/site/github.svg"
+                  alt="githublink"
+                  />
                 </span>
               </a>
             
@@ -2633,13 +2619,12 @@
           
             
             
-              <a href="https://github.com/therj/v3">
+              <a href="https://github.com/therj/v3" class="icon-child">
                 <span>
-                  <img  class="has-dirty-bg-800"
-
-            src="https://v3.rjoshi.net/assets/img/site/external.svg"
-            alt="weblink"
-/>
+                  <img
+                  src="/assets/img/site/external.svg"
+                  alt="weblink"
+                  />
                 </span>
               </a>
             
@@ -2652,18 +2637,14 @@
       <div class="projects__featured__item__image">
         <img
         class="projects__featured__item__image--src"
-        src="https://v3.rjoshi.net/assets/img/brand/project/sample.jpg"
+        src="/assets/img/brand/project/sample.jpg"
         alt=""
         />
       </div>
       <div class="projects__featured__item__content">
-        <div class="projects__featured__item__content__title">
-        <span class="has-dirty-bg-800">Featured Project</span>
-        </div>
+        <div class="projects__featured__item__content__title">Featured Project</div>
         <div class="projects__featured__item__content__name">
-        <span class="has-dirty-bg-800">
           Featured 3
-        </span>
         </div>
         <div class="projects__featured__item__content__description">
           <p>
@@ -2672,23 +2653,22 @@
         </div>
         <div class="projects__featured__item__content__tech">
           
-            <span class="has-dirty-bg-800">Python</span>
+            <span>Python</span>
           
-            <span class="has-dirty-bg-800">Flask</span>
+            <span>Flask</span>
           
-            <span class="has-dirty-bg-800">Postgres</span>
+            <span>Postgres</span>
           
         </div>
         <div class="projects__featured__item__content__links">
           
             
-              <a href="https://github.com/therj/v3">
+              <a href="https://github.com/therj/v3" class="icon-child">
                 <span>
-                  <img  class="has-dirty-bg-800"
-
-            src="https://v3.rjoshi.net/assets/img/site/github.svg"
-            alt="githublink"
-            />
+                  <img
+                  src="/assets/img/site/github.svg"
+                  alt="githublink"
+                  />
                 </span>
               </a>
             
@@ -2696,13 +2676,12 @@
           
             
             
-              <a href="https://github.com/therj/v3">
+              <a href="https://github.com/therj/v3" class="icon-child">
                 <span>
-                  <img  class="has-dirty-bg-800"
-
-            src="https://v3.rjoshi.net/assets/img/site/external.svg"
-            alt="weblink"
-/>
+                  <img
+                  src="/assets/img/site/external.svg"
+                  alt="weblink"
+                  />
                 </span>
               </a>
             
@@ -2718,27 +2697,27 @@
       
       <div class="projects__other">
   <h3 class="projects__other__section-title">
-  <span class="has-dirty-bg">Other Noteworrrty</span>
+  Other Noteworrrty
         </h3>
   <small class="projects__other__section-byline">
   
-    <span class="has-dirty-bg">View Archive</span>
+    View Archive
   
   </small>
     
   <div class="projects__other__card">
     <div class="projects__other__card__icons">
       <span class="left">
-        <img src="https://v3.rjoshi.net/assets/img/site/folder.svg" alt="folder icon"/>
+        <img src="/assets/img/site/folder.svg" alt="folder icon" class="icon"/>
       </span>
       <span class="right">
         
           
           
-            <a href="https://github.com/therj/v3">
+            <a href="https://github.com/therj/v3" class="icon-child">
               <span>
                 <img
-                src="https://v3.rjoshi.net/assets/img/site/external.svg"
+                src="/assets/img/site/external.svg"
                 alt="weblink"/>
               </span>
             </a>
@@ -2746,19 +2725,15 @@
         
       </span>
     </div>
-    <p class="projects__other__card__title">
-      <span class="has-dirty-bg">Lorem ipsum dolor sit.</span>
-    </p>
-    <p class="projects__other__card__description">
-      <span class="has-dirty-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consectetur repudiandae ab perferendis? Minus hic fuga vero animi illo voluptate.</span>
-    </p>
+    <p class="projects__other__card__title">Lorem ipsum dolor sit.</p>
+    <p class="projects__other__card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consectetur repudiandae ab perferendis? Minus hic fuga vero animi illo voluptate.</p>
     <div class="projects__other__card__tech">
     
-      <span class="has-dirty-bg">SCSS</span>
+      <span>SCSS</span>
     
-      <span class="has-dirty-bg">MySQL</span>
+      <span>MySQL</span>
     
-      <span class="has-dirty-bg">Rails</span>
+      <span>Rails</span>
     
     </div>
   </div>
@@ -2766,15 +2741,15 @@
   <div class="projects__other__card">
     <div class="projects__other__card__icons">
       <span class="left">
-        <img src="https://v3.rjoshi.net/assets/img/site/folder.svg" alt="folder icon"/>
+        <img src="/assets/img/site/folder.svg" alt="folder icon" class="icon"/>
       </span>
       <span class="right">
         
           
-            <a href="https://github.com/therj/v3">
+            <a href="https://github.com/therj/v3" class="icon-child">
               <span>
                 <img
-                src="https://v3.rjoshi.net/assets/img/site/github.svg"
+                src="/assets/img/site/github.svg"
                 alt="githublink"/>
               </span>
             </a>
@@ -2783,10 +2758,10 @@
         
           
           
-            <a href="https://github.com/therj/v3">
+            <a href="https://github.com/therj/v3" class="icon-child">
               <span>
                 <img
-                src="https://v3.rjoshi.net/assets/img/site/external.svg"
+                src="/assets/img/site/external.svg"
                 alt="weblink"/>
               </span>
             </a>
@@ -2794,19 +2769,15 @@
         
       </span>
     </div>
-    <p class="projects__other__card__title">
-      <span class="has-dirty-bg">Lorem ipsum dolor sit amet consectetur.</span>
-    </p>
-    <p class="projects__other__card__description">
-      <span class="has-dirty-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. In maxime reiciendis eos tempora eaque blanditiis earum quos deleniti unde.</span>
-    </p>
+    <p class="projects__other__card__title">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="projects__other__card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. In maxime reiciendis eos tempora eaque blanditiis earum quos deleniti unde.</p>
     <div class="projects__other__card__tech">
     
-      <span class="has-dirty-bg">React</span>
+      <span>React</span>
     
-      <span class="has-dirty-bg">NodeJS</span>
+      <span>NodeJS</span>
     
-      <span class="has-dirty-bg">MongoDB</span>
+      <span>MongoDB</span>
     
     </div>
   </div>
@@ -2814,16 +2785,16 @@
   <div class="projects__other__card">
     <div class="projects__other__card__icons">
       <span class="left">
-        <img src="https://v3.rjoshi.net/assets/img/site/folder.svg" alt="folder icon"/>
+        <img src="/assets/img/site/folder.svg" alt="folder icon" class="icon"/>
       </span>
       <span class="right">
         
           
           
-            <a href="https://github.com/therj/v3">
+            <a href="https://github.com/therj/v3" class="icon-child">
               <span>
                 <img
-                src="https://v3.rjoshi.net/assets/img/site/external.svg"
+                src="/assets/img/site/external.svg"
                 alt="weblink"/>
               </span>
             </a>
@@ -2831,19 +2802,15 @@
         
       </span>
     </div>
-    <p class="projects__other__card__title">
-      <span class="has-dirty-bg">Lorem ipsum dolor sit amet consectetur adipisicing.</span>
-    </p>
-    <p class="projects__other__card__description">
-      <span class="has-dirty-bg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet libero, inventore in consequuntur unde, hic quos earum pariatur aliquid illo incidunt eaque omnis sequi saepe quaerat, voluptatum tempore!</span>
-    </p>
+    <p class="projects__other__card__title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p class="projects__other__card__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet libero, inventore in consequuntur unde, hic quos earum pariatur aliquid illo incidunt eaque omnis sequi saepe quaerat, voluptatum tempore!</p>
     <div class="projects__other__card__tech">
     
-      <span class="has-dirty-bg">Vue</span>
+      <span>Vue</span>
     
-      <span class="has-dirty-bg">SQLite</span>
+      <span>SQLite</span>
     
-      <span class="has-dirty-bg">Django</span>
+      <span>Django</span>
     
     </div>
   </div>
@@ -2851,15 +2818,15 @@
   <div class="projects__other__card">
     <div class="projects__other__card__icons">
       <span class="left">
-        <img src="https://v3.rjoshi.net/assets/img/site/folder.svg" alt="folder icon"/>
+        <img src="/assets/img/site/folder.svg" alt="folder icon" class="icon"/>
       </span>
       <span class="right">
         
           
-            <a href="https://github.com/therj/v3">
+            <a href="https://github.com/therj/v3" class="icon-child">
               <span>
                 <img
-                src="https://v3.rjoshi.net/assets/img/site/github.svg"
+                src="/assets/img/site/github.svg"
                 alt="githublink"/>
               </span>
             </a>
@@ -2868,10 +2835,10 @@
         
           
           
-            <a href="https://github.com/therj/v3">
+            <a href="https://github.com/therj/v3" class="icon-child">
               <span>
                 <img
-                src="https://v3.rjoshi.net/assets/img/site/external.svg"
+                src="/assets/img/site/external.svg"
                 alt="weblink"/>
               </span>
             </a>
@@ -2879,19 +2846,15 @@
         
       </span>
     </div>
-    <p class="projects__other__card__title">
-      <span class="has-dirty-bg">Lorem ipsum dolor sit amet consectetur.</span>
-    </p>
-    <p class="projects__other__card__description">
-      <span class="has-dirty-bg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias assumenda ipsa magnam quod tempore.</span>
-    </p>
+    <p class="projects__other__card__title">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="projects__other__card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias assumenda ipsa magnam quod tempore.</p>
     <div class="projects__other__card__tech">
     
-      <span class="has-dirty-bg">Flask</span>
+      <span>Flask</span>
     
-      <span class="has-dirty-bg">Redis</span>
+      <span>Redis</span>
     
-      <span class="has-dirty-bg">Vue</span>
+      <span>Vue</span>
     
     </div>
   </div>
@@ -2899,16 +2862,16 @@
   <div class="projects__other__card">
     <div class="projects__other__card__icons">
       <span class="left">
-        <img src="https://v3.rjoshi.net/assets/img/site/folder.svg" alt="folder icon"/>
+        <img src="/assets/img/site/folder.svg" alt="folder icon" class="icon"/>
       </span>
       <span class="right">
         
           
           
-            <a href="https://github.com/therj/v3">
+            <a href="https://github.com/therj/v3" class="icon-child">
               <span>
                 <img
-                src="https://v3.rjoshi.net/assets/img/site/external.svg"
+                src="/assets/img/site/external.svg"
                 alt="weblink"/>
               </span>
             </a>
@@ -2916,19 +2879,15 @@
         
       </span>
     </div>
-    <p class="projects__other__card__title">
-      <span class="has-dirty-bg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quisquam in odio velit eaque.</span>
-    </p>
-    <p class="projects__other__card__description">
-      <span class="has-dirty-bg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, quo consectetur quis dignissimos perspiciatis assumenda, aut mollitia explicabo at corrupti molestiae.</span>
-    </p>
+    <p class="projects__other__card__title">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi quisquam in odio velit eaque.</p>
+    <p class="projects__other__card__description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque, quo consectetur quis dignissimos perspiciatis assumenda, aut mollitia explicabo at corrupti molestiae.</p>
     <div class="projects__other__card__tech">
     
-      <span class="has-dirty-bg">Bash</span>
+      <span>Bash</span>
     
-      <span class="has-dirty-bg">Python</span>
+      <span>Python</span>
     
-      <span class="has-dirty-bg">GitHub Actions</span>
+      <span>GitHub Actions</span>
     
     </div>
   </div>
@@ -2936,15 +2895,15 @@
   <div class="projects__other__card">
     <div class="projects__other__card__icons">
       <span class="left">
-        <img src="https://v3.rjoshi.net/assets/img/site/folder.svg" alt="folder icon"/>
+        <img src="/assets/img/site/folder.svg" alt="folder icon" class="icon"/>
       </span>
       <span class="right">
         
           
-            <a href="https://github.com/therj/v3">
+            <a href="https://github.com/therj/v3" class="icon-child">
               <span>
                 <img
-                src="https://v3.rjoshi.net/assets/img/site/github.svg"
+                src="/assets/img/site/github.svg"
                 alt="githublink"/>
               </span>
             </a>
@@ -2953,10 +2912,10 @@
         
           
           
-            <a href="https://github.com/therj/v3">
+            <a href="https://github.com/therj/v3" class="icon-child">
               <span>
                 <img
-                src="https://v3.rjoshi.net/assets/img/site/external.svg"
+                src="/assets/img/site/external.svg"
                 alt="weblink"/>
               </span>
             </a>
@@ -2964,21 +2923,17 @@
         
       </span>
     </div>
-    <p class="projects__other__card__title">
-      <span class="has-dirty-bg">Solutions Lorem</span>
-    </p>
-    <p class="projects__other__card__description">
-      <span class="has-dirty-bg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime perferendis tenetur consequuntur aliquam impedit.</span>
-    </p>
+    <p class="projects__other__card__title">Solutions Lorem</p>
+    <p class="projects__other__card__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime perferendis tenetur consequuntur aliquam impedit.</p>
     <div class="projects__other__card__tech">
     
-      <span class="has-dirty-bg">NodeJS</span>
+      <span>NodeJS</span>
     
-      <span class="has-dirty-bg">Nest</span>
+      <span>Nest</span>
     
-      <span class="has-dirty-bg">Next</span>
+      <span>Next</span>
     
-      <span class="has-dirty-bg">Postgres</span>
+      <span>Postgres</span>
     
     </div>
   </div>
@@ -3027,23 +2982,23 @@
     <h3 class="footer__social__title">I'm social</h3>
     <div class="footer__social__link">
       <a href="javascript:void(0)" class="footer__social__link--item">
-        <img src="https://v3.rjoshi.net/assets/img/site/email.svg" alt="" srcset=""/>
+        <img src="/assets/img/site/email.svg" alt="" srcset=""/>
         <span>name@domain.tld</span>
       </a>
       <a href="javascript:void(0)" class="footer__social__link--item">
-        <img src="https://v3.rjoshi.net/assets/img/site/linkedin.svg" alt="" srcset=""/>
+        <img src="/assets/img/site/linkedin.svg" alt="" srcset=""/>
         <span>On LinkedIn</span>
       </a>
       <a href="javascript:void(0)" class="footer__social__link--item">
-        <img src="https://v3.rjoshi.net/assets/img/site/twitter.svg" alt="" srcset=""/>
+        <img src="/assets/img/site/twitter.svg" alt="" srcset=""/>
         <span>On Twitter</span>
       </a>
       <a href="javascript:void(0)" class="footer__social__link--item">
-        <img src="https://v3.rjoshi.net/assets/img/site/instagram.svg" alt="" srcset=""/>
+        <img src="/assets/img/site/instagram.svg" alt="" srcset=""/>
         <span>On Instagram</span>
       </a>
       <a href="javascript:void(0)" class="footer__social__link--item">
-        <img src="https://v3.rjoshi.net/assets/img/site/dribbble.svg" alt="" srcset=""/>
+        <img src="/assets/img/site/dribbble.svg" alt="" srcset=""/>
         <span>On Dribbble</span>
       </a>
     </div>
@@ -3054,16 +3009,16 @@
         >
     <span class="footer__companies__logos">
       <a href="javascript:void(0)">
-        <img alt="comp 1" src="https://v3.rjoshi.net/assets/img/site/dribbble.svg"/>
+        <img alt="comp 1" src="/assets/img/site/dribbble.svg"/>
       </a>
       <a href="javascript:void(0)">
-        <img alt="comp 2" src="https://v3.rjoshi.net/assets/img/site/linkedin.svg"/>
+        <img alt="comp 2" src="/assets/img/site/linkedin.svg"/>
       </a>
       <a href="javascript:void(0)">
-        <img alt="comp 3" src="https://v3.rjoshi.net/assets/img/site/twitter.svg"/>
+        <img alt="comp 3" src="/assets/img/site/twitter.svg"/>
       </a>
       <a href="javascript:void(0)">
-        <img alt="comp 4" src="https://v3.rjoshi.net/assets/img/site/instagram.svg"/>
+        <img alt="comp 4" src="/assets/img/site/instagram.svg"/>
       </a>
     </span>
   </div>
@@ -3071,19 +3026,19 @@
 
 <div class="credit">
   <div class="credit__logo">
-    <img src="https://v3.rjoshi.net/assets/img/brand/logo/svg/large-1.svg" alt=""/>
+    <img src="/assets/img/brand/logo/svg/large-1.svg" alt=""/>
   </div>
   <div class="credit__text">
     <span>Designed &amp; Developed by Rabindra Joshi.</span>
     <span>Built with <a href="">a lot of tools</a> .</span>
   </div>
 
-  <a class="credit__privacy" href="https://v3.rjoshi.net/privacy-policy">Privacy Policy</a>
+  <a class="credit__privacy" href="/privacy-policy">Privacy Policy</a>
 </div>
 
 <div class="build-info"style="display: flex; flex-flow: row wrap; justify-content: space-around; padding: 0.4em 0.2em">
 
-<span>Deployed 22 Apr 2021, 00:55:27 Asia/kathmandu (v1.0.0)</span>
+<span>Deployed 28 Apr 2021, 01:28:11 Asia/kathmandu (v1.0.0)</span>
 </div>
 
 
