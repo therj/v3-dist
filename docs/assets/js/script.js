@@ -164,25 +164,112 @@ function menuToggle() {
 //     scrollLock.enableScroll = enableScroll;
 //   }
 // }
-function podcastSeekHandler(e, theAudio) {
-  const clickedAt = e.clientX || e.pageX;
+function hmsFormatter(seconds) {
+  if (seconds < 0) {
+    // eslint-disable-next-line no-param-reassign
+    seconds = 0;
+  }
+  // eslint-disable-next-line no-param-reassign
+  const h = Math.floor(seconds / 60 / 60);
+  const m = Math.floor(seconds / 60 - h * 60);
+  const s = Math.floor(seconds - m * 60 - h * 60 * 60);
+  return `${h > 0 ? `${h}:` : ``}${m < 10 ? `0${m}` : m}:${s < 10 ? `0${s}` : s}`;
+}
+let hoverStartInterval;
+function podcastHoverStartHandler(e, element, theAudio) {
+  const itemSelector = `.recent__card__podcast__list--item`;
+  const tooltipSelector = `.recent__card__podcast__list--item__progress--tooltip`;
+
+  const theElement = theAudio.closest(itemSelector);
+  const tooltipElement = theElement.querySelector(tooltipSelector);
+
+  // not even metadata loaded => must be paused!
+  if (!theAudio.duration) {
+    theAudio.load();
+    console.info(`No audio duration, podcastHoverStartHandler is waiting!`);
+    hoverStartInterval = setInterval(() => {
+      if (theAudio.duration) {
+        clearInterval(hoverStartInterval);
+        tooltipElement.classList.remove(`d-none`);
+      }
+    }, 200);
+  } else {
+    tooltipElement.classList.remove(`d-none`);
+  }
+}
+function podcastHoverOutHandler(e, element, theAudio) {
+  const itemSelector = `.recent__card__podcast__list--item`;
+  const tooltipSelector = `.recent__card__podcast__list--item__progress--tooltip`;
+
+  const theElement = theAudio.closest(itemSelector);
+  const tooltipElement = theElement.querySelector(tooltipSelector);
+  clearInterval(hoverStartInterval);
+  tooltipElement.classList.add(`d-none`);
+}
+function podcastHoverHandler(e, element, theAudio) {
+  const itemSelector = `.recent__card__podcast__list--item`;
+  const tooltipSelector = `.recent__card__podcast__list--item__progress--tooltip`;
   const offsetLeft = e.currentTarget.getBoundingClientRect().left;
-  const seekRatio = (clickedAt - offsetLeft) / e.currentTarget.offsetWidth;
+  const offsetRight = e.currentTarget.getBoundingClientRect().right;
+  const barWidth = offsetRight - offsetLeft;
+  const clickedAt = (e.clientX || e.pageX) - (offsetLeft % 1);
+  const seekRatio = (clickedAt - offsetLeft) / barWidth;
+
+  const theElement = theAudio.closest(itemSelector);
+  const tooltipElement = theElement.querySelector(tooltipSelector);
+  tooltipElement.style = `left: ${clickedAt - offsetLeft}px`;
+
+  // not even metadata loaded => must be paused!
+  if (!theAudio.duration) {
+    // not loaded yet...
+    const playIn = setInterval(() => {
+      if (theAudio.duration) {
+        clearInterval(playIn);
+        // const seekTime = Math.min(seekRatio * theAudio.duration, theAudio.duration);
+        const seekTime = seekRatio * theAudio.duration;
+        // tooltipElement.style = `display: initial`;
+        tooltipElement.innerText = hmsFormatter(seekTime);
+      }
+    }, 200);
+  } else {
+    // console.info(`isNan, playing!`);
+    // const seekTime = Math.min(seekRatio * theAudio.duration, theAudio.duration);
+    const seekTime = seekRatio * theAudio.duration;
+
+    // tooltipElement.style = `display: initial`;
+    tooltipElement.innerText = hmsFormatter(seekTime, theAudio.duration);
+  }
+}
+function podcastSeekHandler(e, theAudio) {
+  //
+  //
+  //
+
+  // const itemSelector = `.recent__card__podcast__list--item`;
+  // const tooltipSelector = `.recent__card__podcast__list--item__progress--tooltip`;
+  const offsetLeft = e.currentTarget.getBoundingClientRect().left;
+  const offsetRight = e.currentTarget.getBoundingClientRect().right;
+  const barWidth = offsetRight - offsetLeft;
+  const clickedAt = (e.clientX || e.pageX) - (offsetLeft % 1);
+  const seekRatio = (clickedAt - offsetLeft) / barWidth;
+  //
+  //
   // const wasPaused = theAudio.paused || theAudio.ended; // play on seek? Yes!
-  const playIn = setInterval(() => {
-    // not even metadata loaded => must be paused!
-    if (Number.isNaN(theAudio.duration)) {
-      console.info(`isNan, playing!`);
-      theAudio.play();
-    } else {
-      // if (wasPaused) {
-      //   theAudio.pause()
-      // }
-      clearInterval(playIn);
-      const seekTime = seekRatio * theAudio.duration;
-      theAudio.currentTime = seekTime;
-    }
-  }, 200);
+  // not even metadata loaded => must be paused!
+
+  if (theAudio.duration) {
+    const seekTime = seekRatio * theAudio.duration;
+    theAudio.currentTime = seekTime;
+    // theAudio.play();
+  } else {
+    const playIn = setInterval(() => {
+      if (theAudio.duration) {
+        clearInterval(playIn);
+        const seekTime = seekRatio * theAudio.duration;
+        theAudio.currentTime = seekTime;
+      }
+    }, 200);
+  }
 
   if (theAudio.paused) {
     theAudio.play();
@@ -193,6 +280,9 @@ function podcastPlayerHandler(_params) {
   const itemSelector = `.recent__card__podcast__list--item`;
   const toggleIconSelector = `${itemSelector}__heading--btn`;
   const progressSelector = `${itemSelector}__progress`;
+  const progressSelectorMaster = `${progressSelector}--eventMaster`;
+
+  const playedTimeSelector = `.recent__card__podcast__list--item__datetime--duration .played`;
   // const plusMinusSelector = `${itemSelector}__plusminus`
   const podcasts = document.querySelectorAll(itemSelector);
 
@@ -200,7 +290,8 @@ function podcastPlayerHandler(_params) {
     const element = podcasts[i];
     const theButton = element.querySelector(toggleIconSelector);
     const theAudio = element.querySelector(`audio`);
-    const theBar = element.querySelector(progressSelector);
+    const theBar = element.querySelector(progressSelectorMaster);
+    const timeProgress = element.querySelector(playedTimeSelector);
     // const plusMinus = element.querySelector(plusMinusSelector)
     // const plus10 = plusMinus.querySelector('.plus10')
     // const plus30 = plusMinus.querySelector('.plus30')
@@ -226,9 +317,13 @@ function podcastPlayerHandler(_params) {
       const progress = element.querySelector(progressSelector);
       const played = progress.querySelector(`${progressSelector}--played`);
       played.style.width = `${(theAudio.currentTime / theAudio.duration) * 100}%`;
+      timeProgress.innerHTML = `${hmsFormatter(theAudio.currentTime)} / `;
     });
 
-    theBar.addEventListener(`mouseup`, (e) => podcastSeekHandler(e, theAudio));
+    theBar.addEventListener(`click`, (e) => podcastSeekHandler(e, theAudio));
+    theBar.addEventListener(`mouseenter`, (e) => podcastHoverStartHandler(e, element, theAudio));
+    theBar.addEventListener(`mousemove`, (e) => podcastHoverHandler(e, element, theAudio));
+    theBar.addEventListener(`mouseleave`, (e) => podcastHoverOutHandler(e, element, theAudio));
 
     // plus minus 10 & 30
     // plus10.addEventListener('click', (e) => {
@@ -246,12 +341,13 @@ function podcastPlayerHandler(_params) {
 
     // When audio plays, do XYZ!
     theAudio.addEventListener(`play`, (_event) => {
-      console.info(`Video is playing`);
+      console.info(`Audio "play"`);
+      element.classList.add(`started`);
       element.classList.add(`playing`);
     });
 
     theAudio.addEventListener(`playing`, (event) => {
-      // console.log('Video is playing');
+      console.info(`Audio "playing"`);
       const audios = document.getElementsByTagName(`audio`);
       for (let i = 0, len = audios.length; i < len; i++) {
         if (audios[i] !== event.target) {
@@ -261,11 +357,12 @@ function podcastPlayerHandler(_params) {
     });
 
     theAudio.addEventListener(`pause`, (_event) => {
-      console.info(`Video is  paused`);
+      console.info(`Audio "pause"`);
       element.classList.remove(`playing`);
     });
 
     theAudio.addEventListener(`progress`, (_event) => {
+      console.info(`Audio "progress"`);
       const progress = element.querySelector(progressSelector);
       const buffered = progress.querySelector(`${progressSelector}--buffered`);
       buffered.innerHTML = ``;
@@ -289,16 +386,17 @@ function podcastPlayerHandler(_params) {
     });
 
     theAudio.addEventListener(`loadstart`, (_event) => {
-      console.info(`Video is  loadstart`);
+      console.info(`Audio "loadstart"`);
     });
     theAudio.addEventListener(`loadeddata`, (_event) => {
-      console.info(`Video is  loadeddata`);
+      console.info(`Audio "loadeddata"`);
     });
     theAudio.addEventListener(`ended`, (_event) => {
-      console.info(`Video is  ended`);
+      console.info(`Audio "ended"`);
     });
     theAudio.addEventListener(`canplay`, (_event) => {
-      console.info(`Video is  canplay`);
+      console.info(`Audio "canplay"`);
+      element.classList.add(`canplay`);
     });
   }
 }
