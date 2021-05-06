@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Rabindra Joshi</title>
+  <subtitle>I build things for the web.</subtitle>
+  <link href="https://rjoshi.net/feed.xml" rel="self"/>
+  <link href="https://rjoshi.net/"/>
+  <updated>2021-05-06T22:18:31Z</updated>
+  <id>https://rjoshi.net/</id>
+  <author>
+    <name>Rabindra Joshi</name>
+    <email>me@example.com</email>
+  </author>
+</feed>
