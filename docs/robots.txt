@@ -1,2 +1,0 @@
-Sitemap: https://v3.rjoshi.net/sitemap.xml
-User-agent: *
