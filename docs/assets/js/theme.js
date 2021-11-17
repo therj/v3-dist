@@ -1,15 +1,25 @@
 const rootEl = document.querySelector(`:root`);
-// const defaultTheme = rootEl.getAttribute('data-theme');
 const defaultTheme = rootEl.dataset.theme;
 
 const DARK_THEME_NAME = `dark`;
 const LIGHT_THEME_NAME = `light`;
 const RESET_THEME_NAME = `RESET_THEME`;
-const DEFAULT_THEME_NAME = defaultTheme;
+const DEFAULT_THEME_NAME = defaultTheme || LIGHT_THEME_NAME;
+
+function getDefaultTheme() {
+  const systemPrefersDarkMode = window.matchMedia(`(prefers-color-scheme:dark)`)
+    .matches;
+  if (systemPrefersDarkMode) {
+    return DARK_THEME_NAME;
+  }
+
+  return DEFAULT_THEME_NAME;
+}
 
 function getTheme() {
   // If user took time to enable dark theme on their device, respect their choice!
-  const systemPrefersDarkMode = window.matchMedia(`(prefers-color-scheme:dark)`).matches;
+  const systemPrefersDarkMode = window.matchMedia(`(prefers-color-scheme:dark)`)
+    .matches;
   const themeLocal = localStorage.getItem(`theme`);
 
   // User set > system
@@ -28,7 +38,7 @@ function isThemeValid(mode) {
 
 function setTheme(mode) {
   if (mode === RESET_THEME_NAME) {
-    return rootEl.setAttribute(`data-theme`, getTheme());
+    return rootEl.setAttribute(`data-theme`, getDefaultTheme());
   }
   const isValid = isThemeValid(mode);
   if (isValid) {
@@ -74,7 +84,7 @@ function init() {
     setTheme(themeLocal);
     // Defaulters not welcome!
     if (!isThemeValid(themeLocal)) {
-      storeThemePreference(DEFAULT_THEME_NAME);
+      storeThemePreference(RESET_THEME_NAME);
     }
   });
 }
