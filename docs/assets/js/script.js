@@ -337,6 +337,16 @@ function init() {
   goLight.addEventListener(`click`, (_e) => {
     changeTheme(window.LIGHT_THEME_NAME);
   });
+
+  document.querySelector(`.header__theme`).oncontextmenu = (e) => {
+    e.preventDefault();
+    changeTheme(window.RESET_THEME_NAME);
+    setTimeout(() => {
+      // eslint-disable-next-line no-alert
+      window.alert(`Using default theme. Preference removed.`);
+    }, 500);
+    return true;
+  };
   // for scrolling experience tabs
   // experienceRadioChangeListener()
   // for scrolling foss tabs

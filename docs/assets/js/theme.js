@@ -4,6 +4,7 @@ const defaultTheme = rootEl.dataset.theme;
 
 const DARK_THEME_NAME = `dark`;
 const LIGHT_THEME_NAME = `light`;
+const RESET_THEME_NAME = `RESET_THEME`;
 const DEFAULT_THEME_NAME = defaultTheme;
 
 function getTheme() {
@@ -26,6 +27,9 @@ function isThemeValid(mode) {
 }
 
 function setTheme(mode) {
+  if (mode === RESET_THEME_NAME) {
+    return rootEl.setAttribute(`data-theme`, getTheme());
+  }
   const isValid = isThemeValid(mode);
   if (isValid) {
     rootEl.setAttribute(`data-theme`, mode);
@@ -34,6 +38,10 @@ function setTheme(mode) {
 }
 
 function storeThemePreference(mode) {
+  if (mode === RESET_THEME_NAME) {
+    return localStorage.removeItem(`theme`);
+  }
+
   let isValid = isThemeValid(mode);
   // nullify if falsy value
   if (!mode) {
@@ -52,6 +60,7 @@ function init() {
   window.DARK_THEME_NAME = DARK_THEME_NAME;
   window.LIGHT_THEME_NAME = LIGHT_THEME_NAME;
   window.DEFAULT_THEME_NAME = DEFAULT_THEME_NAME;
+  window.RESET_THEME_NAME = RESET_THEME_NAME;
   window.setTheme = setTheme;
   window.storeThemePreference = storeThemePreference;
 
