@@ -1,2 +1,2 @@
-Sitemap: https://v3.rjoshi.net/sitemap.xml
+Sitemap: https://rjoshi.net/sitemap.xml
 User-agent: *
