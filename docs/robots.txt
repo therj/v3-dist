@@ -1,5 +1,5 @@
-Sitemap: https://rjoshi.net/sitemap.xml
+Sitemap: https://v3-dist.vercel.app/sitemap.xml
 User-agent: *
 
-Allow: /
+Disallow: /
 
