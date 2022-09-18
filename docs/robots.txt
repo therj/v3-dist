@@ -1,4 +1,4 @@
-Sitemap: https://v3-dist.vercel.app/sitemap.xml
+Sitemap: https://rjoshi.net/sitemap.xml
 User-agent: *
 
 Disallow: /
